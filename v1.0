@@ -1,0 +1,98 @@
+<?php
+/**
+ *Don't Delete This Message
+ *name: fox e-mail template
+ *author: amir christ
+ *email: info@onenet.ir
+ *website: http://onenet.ir/
+ *version: 1.0
+*/      ?>
+{if $bHtml}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>fox e-mail template</title>
+</head>
+<body style="margin: 0; padding: 0;" dir="ltr">
+<table width="98%" border="0" cellspacing="0" cellpadding="110">
+<tr>
+<td bgcolor="#F1F1F1" width="100%" style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">
+<table cellpadding="10" cellspacing="0" border="0" width="100%" height="80">
+<tr align="left" valign="top" bgcolor="#333E46">
+<td width="70%"><font color="#FFFFFF" size="4" face="Tahoma, Geneva, sans-serif">The ONE NET Club.</font><br/><font color="#FFFFFF" size="2" face="Tahoma, Geneva, sans-serif">
+<div style="padding-top:15px; padding-bottom:1px;">
+E-mail sent on:</font><br/>
+<font color="#4B8FCF" size="2" face="Tahoma, Geneva, sans-serif">
+<?php
+// Variable used to display hyphen
+$hyphen = "-";
+// Prints the date & time ex: Monday 23th of September 2012 - 03:12:46 PM
+echo date('l jS \of F Y ' . $hyphen . ' h:i:s A');
+?> 
+</div>
+</font>
+</td>
+<td width="30%" height="84" align="center" valign="middle">
+<table cellspacing="0" cellpadding="0"><tr><td style="border: 1px solid #3b6e22;"><table cellspacing="0" cellpadding="0">
+<tr>
+<td style="padding: 5px 15px;background-color: #4B8FCF;border-top: 1px solid #4B8FCF;"><a href="http://sitename.com/" style="color: #FFF;font-size: 13px;font-weight: bold;text-decoration: none;">Sign In Now</a></td></tr></table></td></tr></table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" align="left" valign="top" bgcolor="#FFFFFF"><font color="#660000" size="2" face="Tahoma, Geneva, sans-serif"><div style="margin-bottom: 15px;"><div style="font-weight: bold; margin-bottom: 15px;">{if $bMessageHeader}
+{if isset($sName)}
+{phrase var='core.hello_name' name=$sName}
+{else}
+{phrase var='core.hello'}
+{/if}, <br />
+        <br />
+{/if}
+{$sMessage} <br /><br/>
+        <hr align="center" width="90%" color="#333E46" />
+                          </div></font></td></tr></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10" bgcolor="#FFFFFF">
+<tr align="left" valign="top" bgcolor="#FFFFFF" cellspacing="0"><td width="80%">
+Invite your friends to <a href="http://yoursite.com" target="_blank" style="color: #3b5998; text-decoration: none; font-weight: bold; style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;>ONE NET</a><br/><br/>
+Show them why they should be using a smart address book of their own.<br/>
+<a href="http://yoursite.com" target="_blank" style="color: #3b5998; text-decoration: none; font-weight: bold; style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;>Invite now</a>
+</td>
+<td width="20%">
+<a href="http://yoursite.com" target="_blank"><img src="http://up.palringo.eu/uploads/1371955810911.gif" alt="" align="middle" /></a>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10" bgcolor="#FFFFFF">
+<tr align="left" valign="bottom" bgcolor="#FFFFFF"><td width="100%">
+<hr align="center" width="90%" color="#333E46" /><br/>
+Have questions? Please visit our <a href="http://yoursite.com" target="_blank" style="color: #3b5998; text-decoration: none; font-weight: bold; style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;>Help</a> page.<br/>
+To stop receiving notification emails, update your settings <a href="http://www.yoursite.com/index.php?do=/user/privacy/" target="_blank" style="color: #3b5998; text-decoration: none; font-weight: bold; style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;>Here</a>.<br/><br/>
+Best Regards:<br/>
+The ONE NET Club
+</td></tr>
+</table>
+<table cellspacing="10">
+<tr>
+<td width="764" style="font-size: 12px;" valign="top" align="left">
+<font color="#000033" size="2" face="Tahoma, Geneva, sans-serif">You're receiving this newsletter because you or someone else subscribe your email in our site. <br/>
+Having issues viewing this email? <a href="http://yoursite.com/user/privacy/"> View it in our site</a><br/><br/><center><b><i>Copyright &copy; 2013 - Designed and Coded By amir christ - All rights reserved</i></b></center></font>
+</tr></table>
+</td>
+</tr>
+</table
+></body>
+</html>
+{else}
+{if $bMessageHeader}
+{if isset($sName)}
+{phrase var='core.hello_name' name=$sName}
+{else}
+{phrase var='core.hello'}
+{/if},
+{/if}
+{$sMessage}
+{$sEmailSig}
+ 
+{/if}
